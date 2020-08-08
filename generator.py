@@ -7,18 +7,18 @@ from selenium.webdriver.common.keys import Keys
 
 import time
 
-import pyperclip
 import emoji
 from datetime import date
 
 #Configurar Selenium
 browser = webdriver.Firefox(executable_path='./geckodriver')
 browser.get("https://web.whatsapp.com/")
+
+clientes = ["Lupita", "Coppel Pedro Cajas", "Coppel Eloisa Puerto", "Coppel Doña Maggui", "Coppel Joel Ropa",  "Coppel Naomi Banco", "Coppel Fernanda Cajas", "Coppel Yessy", "Coppel Gustavo Movistar", "Coppel Victor Movistar", "Coppel Bianca Castro", "Coppel Rosita", "Coppel Carlos Banco", "Coppel Gaby Paqueteria", "Coppel Adriana Afore", "Coppel Damian", "Coppel Mariana Banco", "Coppel Perla", "Coppel Rosario", "Coppel Ruby", "Coppel Carlos Zapateria", "Coppel Guillermo Mendez", "Coppel Carlos Telefonia", "Coppel Yonatan" , "Coppel Sharid", "Coppel Pablo", "Coppel Yaritza", "Coppel Dulce", "Coppel Mayra"]
+
+print(len(clientes))
+
 empezar = input('Presiona Enter despues de haber iniciado sesion')
-
-contact = "Mama"
-
-clientes = ["Lupita", "Nelly", "Coppel Pedro Cajas", "Coppel Eloisa Puerto", "Coppel Doña Maggui", "Coppel Joel Ropa",  "Coppel Naomi Banco", "Coppel Fernanda Cajas", "Coppel Yessy", "Coppel Gustavo Movistar", "Coppel Victor Movistar", "Coppel Bianca Castro", "Coppel Rosita", "Coppel Carlos Banco", "Coppel Gaby Paqueteria", "Coppel Adriana Afore", "Coppel Damian", "Coppel Mariana Banco", "Coppel Perla" ]
 
 today = date.today()
 
@@ -34,6 +34,8 @@ comida1 = input('Comida 1:')
 comida2 = input('Comida 2:')
 
 text = f'Hola, soy Doña Mary de la cocina economica. \nMañana {dia} tenemos: 🍽🍴\n👉 {comida1}🍗\n👉 {comida2}🍲\nTe agradeceria si le das Like a nuestra pagina: https://www.facebook.com/Cocina-Economica-Mary-115954489868469\nWhatsapp: 9992256740'
+
+print(text)
 
 #Enviar el mensaje a cada cliente
 for e in clientes:
@@ -55,6 +57,6 @@ for e in clientes:
     input_box = browser.find_element_by_xpath(inp_xpath)
     time.sleep(2)
     input_box.send_keys(text + Keys.ENTER)
+    
 
-print(text)
-
+empezar = input('Presiona Enter para salir')
