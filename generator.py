@@ -6,6 +6,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 
 import time
+import random
 
 import emoji
 from datetime import date
@@ -14,7 +15,7 @@ from datetime import date
 browser = webdriver.Firefox(executable_path='./geckodriver')
 browser.get("https://web.whatsapp.com/")
 
-clientes = ["Lupita", "Coppel Pedro Cajas", "Coppel Eloisa Puerto", "Coppel Doña Maggui", "Coppel Joel Ropa",  "Coppel Naomi Banco", "Coppel Fernanda Cajas", "Coppel Yessy", "Coppel Gustavo Movistar", "Coppel Victor Movistar", "Coppel Bianca Castro", "Coppel Rosita", "Coppel Carlos Banco", "Coppel Gaby Paqueteria", "Coppel Adriana Afore", "Coppel Damian", "Coppel Mariana Banco", "Coppel Perla", "Coppel Rosario", "Coppel Ruby", "Coppel Carlos Zapateria", "Coppel Guillermo Mendez", "Coppel Carlos Telefonia", "Coppel Yonatan" , "Coppel Sharid", "Coppel Pablo", "Coppel Yaritza", "Coppel Dulce", "Coppel Mayra"]
+clientes = ["Lupita", "Coppel Pedro Cajas", "Coppel Eloisa Puerto", "Coppel Doña Maggui", "Coppel Joel Ropa",  "Coppel Naomi Banco", "Coppel Fernanda Cajas", "Coppel Yessy", "Coppel Gustavo Movistar", "Coppel Victor Movistar", "Coppel Bianca Castro", "Coppel Rosita", "Coppel Carlos Banco", "Coppel Gaby Paqueteria", "Coppel Adriana Afore", "Coppel Damian", "Coppel Mariana Banco", "Coppel Perla", "Coppel Rosario", "Coppel Ruby", "Coppel Carlos Zapateria", "Coppel Guillermo Mendez", "Coppel Carlos Telefonia", "Coppel Yonatan" , "Coppel Sharid", "Coppel Pablo", "Coppel Yaritza", "Coppel Dulce", "Coppel Mayra", "Coppel Daniel Pech", "Coppel Citlali" ]
 
 print(len(clientes))
 
@@ -30,10 +31,36 @@ if today.weekday() == 6:
 else:
     dia = dias_de_semana[today.weekday() + 1]
 
-comida1 = input('Comida 1:')
-comida2 = input('Comida 2:')
+comida1 = "Pechuga Empanizada"
+comida2 = "Chilaquiles de Mole"
 
-text = f'Hola, soy Doña Mary de la cocina economica. \nMañana {dia} tenemos: 🍽🍴\n👉 {comida1}🍗\n👉 {comida2}🍲\nTe agradeceria si le das Like a nuestra pagina: https://www.facebook.com/Cocina-Economica-Mary-115954489868469\nWhatsapp: 9992256740'
+linkComida1 = "https://rebrand.ly/PechugaEmpanizada"
+linkComida2 = "http://rebrand.ly/ChilaquilesDeMole"
+
+#PechugaEmpanizada = 
+#ChilaquilesMole = 
+#Tortitas de Carne
+#Tortitas de Papa
+#Relleno Negro
+#Puchero
+#Frijol con Puerco
+#Carne Molida Con Papa y Zanahoria 
+#Fajitas de Pollo
+#Albondigas Con Fideo
+#Poc Chuc 
+#Pescado Empanizado
+#Pechuga en Crema de Chipotle
+#Asado Rojo
+#Potaje de Lentejas
+#Pollo en Mole
+#Puerco Entomatado
+#Chuletas Fritas
+#Pollo Asado con Sopa
+
+
+text2 = f'Nuevo metodo de pago: Mercado pago\nPara comprar\n 1.-Abre el link de la comida que quieras comprar\n2.-Si tienes cuenta de MercadoPago, seleccionala, sino, selecciona cualquier metodo, llena los campos y escribe tu correo. \n 3.- Al terminar de procesarse el pago, manda tu numero de folio.\n 4.- Una vez que te hayas registrado, se habran guardado tus metodos de pago.'
+
+text = f'Hola, soy Doña Mary de la cocina economica. \nMañana {dia} tenemos: 🍽🍴\n👉 *{comida1}*🍗: {linkComida1} \n👉 *{comida2}*  🍲: {linkComida2} \nTe agradeceria si le das Like a nuestra pagina: https://www.facebook.com/Cocina-Economica-Mary-115954489868469\nWhatsapp: 9992256740'
 
 print(text)
 
@@ -55,7 +82,7 @@ for e in clientes:
     #Buscar campo de texto del mensaje y enviarlo
     inp_xpath = '//div[@class="_3FRCZ copyable-text selectable-text"][@contenteditable="true"][@data-tab="1"]'
     input_box = browser.find_element_by_xpath(inp_xpath)
-    time.sleep(2)
+    time.sleep(random.randint(1, 5))
     input_box.send_keys(text + Keys.ENTER)
     
 
