@@ -29,8 +29,81 @@ listaComidas = [
         "name" : "Fajitas de Pollo",
         "link" : "https://rebrand.ly/FajitasDePollo",
         "n" : 2
+    },{
+        "name" : "Chilaquiles de Mole",
+        "link" : "http://rebrand.ly/ChilaquilesDeMole",
+        "n" : 3
+    },{
+        "name" : "Pechuga a la Plancha en Crema de Chipotle",
+        "link" : "https://rebrand.ly/PechugaPlanchaCremaChipotle",
+        "n" : 4
+    },{
+        "name" : "Pozole",
+        "link" : "https://rebrand.ly/Pozole",
+        "n" : 5
+    },{
+        "name" : "Relleno Negro", 
+        "link" : "https://rebrand.ly/RellenoNegro",
+        "n" : 6
+    }
+    ,{
+        "name" : "Carne Molida",
+        "link" : "https://rebrand.ly/CarneMolida",
+        "n" : 7
+    },{
+        "name" : "Pechuga Parmesana",
+        "link" : "https://rebrand.ly/PechugaParmesana",
+        "n" : 8
+    },{
+        "name" : "Poc Chuc",
+        "link" : "https://rebrand.ly/PocChuc",
+        "n" : 9
+    },{
+        "name" : "Tortitas de Papa",
+        "link" : "https://rebrand.ly/TortitasDePapa",
+        "n" : 10
+    },{
+        "name": "Bistec Con Papa",
+        "link" : "https://rebrand.ly/BistecPapa",
+        "n" : 11
+    },{
+        "name" : "Pollo en Mole",
+        "link" : "https://rebrand.ly/MolePollo",
+        "n" : 12
+    },{
+        "name" : "Carnitas Estilo Michoacan",
+        "link" : "https://rebrand.ly/CarnitasEstiloMichoacan",
+        "n" : 13
+    },{
+        "name" : "Potaje de Lentejas",
+        "link" : "https://rebrand.ly/PotajeDeLentejas",
+        "n"  : 14
+
+    },{
+        "name": "Fajitas de Puerco",
+        "link": "https://rebrand.ly/FajitasDePuerco",
+        "n" : 15
     }
 ]
+    #PechugaEmpanizada = 
+    #ChilaquilesMole = 
+    #Tortitas de Carne
+    #Tortitas de Papa
+    #Relleno Negro
+    #Puchero
+    #Frijol con Puerco
+    #Carne Molida Con Papa y Zanahoria 
+    #Fajitas de Pollo
+    #Albondigas Con Fideo
+    #Poc Chuc 
+    #Pescado Empanizado
+    #Pechuga en Crema de Chipotle
+    #Asado Rojo
+    #Potaje de Lentejas
+    #Pollo en Mole
+    #Puerco Entomatado
+    #Chuletas Fritas
+    #Pollo Asado con Sopa
 
 def aksForInput(skip = 550):
 
@@ -60,9 +133,7 @@ def run():
     browser = webdriver.Firefox(executable_path='./geckodriver')
     browser.get("https://web.whatsapp.com/")
 
-    clientes = ["Lupita", "Coppel Pedro Cajas", "Coppel Eloisa Puerto", "Coppel Doña Maggui", "Coppel Joel Ropa",  "Coppel Naomi Banco", "Coppel Fernanda Cajas", "Coppel Yessy", "Coppel Gustavo Movistar", "Coppel Victor Movistar", "Coppel Bianca Castro", "Coppel Rosita", "Coppel Carlos Banco", "Coppel Gaby Paqueteria", "Coppel Adriana Afore", "Coppel Damian", "Coppel Mariana Banco", "Coppel Perla", "Coppel Rosario", "Coppel Ruby", "Coppel Carlos Zapateria", "Coppel Guillermo Mendez", "Coppel Carlos Telefonia", "Coppel Yonatan" , "Coppel Sharid", "Coppel Pablo", "Coppel Yaritza", "Coppel Dulce", "Coppel Mayra", "Coppel Daniel Pech", "Coppel Citlali", "Coppel Lizzeth" ]
-
-    clientes = ["Edher Sanchez"]
+    clientes = ["Lupita", "Vertiche Juan", "Coppel Pedro Cajas", "Coppel Eloisa Puerto", "Coppel Doña Maggui", "Coppel Joel Ropa",  "Coppel Naomi Banco", "Coppel Fernanda Cajas", "Coppel Yessy", "Coppel Gustavo Movistar", "Coppel Victor Movistar", "Coppel Bianca Castro", "Coppel Rosita", "Coppel Carlos Banco", "Coppel Gaby Paqueteria", "Coppel Adriana Afore", "Coppel Damian", "Coppel Mariana Banco", "Coppel Perla", "Coppel Rosario", "Coppel Ruby", "Coppel Carlos Zapateria", "Coppel Guillermo Mendez", "Coppel Carlos Telefonia", "Coppel Yonatan" , "Coppel Sharid", "Coppel Pablo", "Coppel Yaritza", "Coppel Dulce", "Coppel Mayra", "Coppel Daniel Pech", "Coppel Citlali", "Coppel Lizzeth", "Flexi", "Flexi 3", "Loteria", "Coppel Iyari", "Vertiche Luis", "Michelle", "Radioshack Uriel" ]
 
     print(str(len(clientes)) + " Personas recibiran este Mensaje" )
 
@@ -77,40 +148,6 @@ def run():
         dia = 'Lunes'
     else:
         dia = dias_de_semana[today.weekday() + 1]
-
-    comida2 = "Chilaquiles de Mole"
-    comida4 = "Pechuga a la Plancha en Crema de Chipotle"
-    pozole = "Pozole"
-    rellenoNegro = "Relleno Negro"
-    carneMolida = "Carne Molida"
-    pechugaParmesana = "Pechuga Parmesana"
-    linkPechugaParmesana = "https://rebrand.ly/PechugaParmesana"
-    linkCarneMolida = "https://rebrand.ly/CarneMolida"
-    linkRellenoNegro = "https://rebrand.ly/RellenoNegro"
-    linkChilaquilesMole = "http://rebrand.ly/ChilaquilesDeMole"
-    linkPechugaPlanchaCremaChipotle = "https://rebrand.ly/PechugaPlanchaCremaChipotle"
-    linkPozole = "https://rebrand.ly/Pozole"
-
-    #PechugaEmpanizada = 
-    #ChilaquilesMole = 
-    #Tortitas de Carne
-    #Tortitas de Papa
-    #Relleno Negro
-    #Puchero
-    #Frijol con Puerco
-    #Carne Molida Con Papa y Zanahoria 
-    #Fajitas de Pollo
-    #Albondigas Con Fideo
-    #Poc Chuc 
-    #Pescado Empanizado
-    #Pechuga en Crema de Chipotle
-    #Asado Rojo
-    #Potaje de Lentejas
-    #Pollo en Mole
-    #Puerco Entomatado
-    #Chuletas Fritas
-    #Pollo Asado con Sopa
-
 
     text = f'Hola, soy Doña Mary de la cocina economica. \nMañana {dia} tenemos: 🍽🍴\n👉 *{listaComidas[firstMenu]["name"]}*🍗: {listaComidas[firstMenu]["link"]} \n👉 *{listaComidas[secondMenu]["name"]}*  🍲: {listaComidas[secondMenu]["link"]} \nTe agradeceria si le das Like a nuestra pagina: https://www.facebook.com/Cocina-Economica-Mary-115954489868469\nWhatsapp: 9992256740'
 
@@ -138,6 +175,7 @@ def run():
         input_box.send_keys(text + Keys.ENTER)
 
     empezar = input('Presiona Enter para salir')
+    browser.quit()
 
 if __name__ == "__main__":
     run()
